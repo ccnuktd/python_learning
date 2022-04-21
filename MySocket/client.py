@@ -1,15 +1,16 @@
 import socket
 import sys
 
-# Create a UDP socket
+# 创建一个UTP报文
+# 注意TCP的报文格式为SOCK_STREAM，UTP为SOCK_DGRAM
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-server_address = ('192.168.43.185', 1111)
+# 请求的ip地址，这是一个域名服务器
+request_ip = '8.8.8.8'
+port = 1111
+server_address = (request_ip, port)
 message = 'This is the message.  It will be repeated.'
 
 sock.sendto(bytes(message.encode('utf-8')), server_address)
 
-#
-# data, server = sock.recvfrom(4096)
-# print(data.decode("utf-8"))
-# sock.close()
+

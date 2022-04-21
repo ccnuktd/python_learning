@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>polls</title>
+</head>
+<body>
+    {# {{}}表示单独变量的使用，{%%}表示语句 #}
+    {% if latest_question_list %}
+        <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>{{ none_page }}</p>
+    {% endif %}
+</body>
+</html>

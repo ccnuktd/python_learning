@@ -33,6 +33,7 @@ def read_csv_line(file_path: str, encoding='utf-8'):
             yield line
 
 if __name__ == '__main__':
+    pass
     # for line in read_file_line('./data.csv'):
     #     print(line)
 

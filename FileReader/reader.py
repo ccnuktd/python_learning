@@ -1,5 +1,4 @@
 import csv
-import sys
 
 
 def read_file_line(file_path: str, encoding='utf-8'):
@@ -16,6 +15,7 @@ def read_file_line(file_path: str, encoding='utf-8'):
         for line in lines:
             yield line
 
+
 def read_csv_line(file_path: str, encoding='utf-8'):
     """
     逐行读取csv文件数据，默认以utf-8编码读取
@@ -31,6 +31,7 @@ def read_csv_line(file_path: str, encoding='utf-8'):
         next(reader)
         for line in reader:
             yield line
+
 
 if __name__ == '__main__':
     pass

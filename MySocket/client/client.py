@@ -9,8 +9,8 @@ def udp_test():
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     # 请求的ip地址，这是一个域名服务器
-    request_ip = '10.224.195.24'
-    port = 1111
+    request_ip = '192.168.43.118'
+    port = 10003
     server_address = (request_ip, port)
     message = "This is the message"
 
@@ -27,8 +27,8 @@ def tcp_test():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     # 请求的ip地址，这是一个域名服务器
-    request_ip = '10.224.195.24'
-    port = 1111
+    request_ip = '192.168.43.118'
+    port = 10003
     server_address = (request_ip, port)
 
     # 连接tcp服务器
@@ -42,4 +42,4 @@ def tcp_test():
 
 if __name__ == '__main__':
     tcp_test()
-    udp_test()
+    # udp_test()

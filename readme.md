@@ -11,3 +11,9 @@
 
 #### DjangoTutorial
 > 跟着Django官方文档写的代码
+ 
+#### ScrapyAnime
+> 爬取P站动漫图片的小工具，使用PyQt5制作
+> 
+截图：
+![img.png](ScrapyAnime/img.png)

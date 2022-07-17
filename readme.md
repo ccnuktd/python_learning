@@ -14,6 +14,6 @@
  
 #### ScrapyAnime
 > 爬取P站动漫图片的小工具，使用PyQt5制作
-> 
-截图：
+>
+截图：【看不到图片参考 [链接](https://blog.csdn.net/qq_38232598/article/details/91346392)】
 ![img.png](ScrapyAnime/img.png)

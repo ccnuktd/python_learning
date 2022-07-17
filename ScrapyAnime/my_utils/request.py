@@ -1,6 +1,6 @@
 from threading import Thread
 from fake_useragent import UserAgent
-import utils
+import ScrapyAnime.my_utils.utils as utils
 import requests
 import json
 
@@ -107,7 +107,7 @@ def download_picture(r18, tags):
             print(pic_name + " downloaded!")
             break
         else:
-            print("第" + str(pic_num) + "此请求的图片损坏")
+            print("第" + str(pic_num) + "次请求的图片损坏")
             pic_num += 1
     return pic_name
 

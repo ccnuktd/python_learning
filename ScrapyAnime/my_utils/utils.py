@@ -3,9 +3,6 @@ import random
 
 root_path = "pictures/"
 
-if not os.path.exists("../pictures"):
-    os.makedirs("../pictures")
-
 
 def get_file_path(file_name):
     """

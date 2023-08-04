@@ -1,6 +1,6 @@
 from threading import Thread
 from fake_useragent import UserAgent
-import ScrapyAnime.my_utils.utils as utils
+import my_utils.utils as utils
 import requests
 import json
 

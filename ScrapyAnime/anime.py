@@ -18,7 +18,7 @@ class Ui_Dialog(object):
         self.u_label_title = QtWidgets.QLabel(Dialog)
         self.u_label_title.setGeometry(QtCore.QRect(50, 20, 91, 41))
         self.u_label_title.setObjectName("u_label_title")
-        self.u_graghView_picture = QtWidgets.QGraphicsView(Dialog)
+        self.u_graghView_picture = ImageView(Dialog)
         self.u_graghView_picture.setGeometry(QtCore.QRect(60, 80, 291, 351))
         self.u_graghView_picture.setObjectName("u_graghView_picture")
         self.u_text_tagInput = QtWidgets.QTextEdit(Dialog)
@@ -67,3 +67,4 @@ class Ui_Dialog(object):
         self.u_radioBtn_noero.setText(_translate("Dialog", "非工口"))
         self.u_radioBtn_ero.setText(_translate("Dialog", "工口"))
         self.u_radioBtn_both.setText(_translate("Dialog", "混合"))
+from my_utils.ImageView import ImageView

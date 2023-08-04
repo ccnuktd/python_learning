@@ -10,10 +10,11 @@ import sys
 import os
 from PyQt5.QtWidgets import QApplication, QDialog, QGraphicsScene, QMessageBox, QGraphicsPixmapItem
 from PyQt5.QtCore import QCoreApplication, Qt
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QImage
 import anime
 from my_utils import utils
 from my_utils.request import WorkThread
+from my_utils.ImageView import ImageView
 
 
 class MyMainDialog(QDialog):
@@ -77,7 +78,7 @@ class MyMainDialog(QDialog):
         state = self.get_radio_btn_state()
         if state == -1:
             # 弹出报错信息框
-            self.show_error_message("未选择图片类型和填写图片描述！")
+            self.show_error_message("错误", "未选择图片类型和填写图片描述！")
             return False
         try:
             content = self.parser_tag_content()
@@ -129,16 +130,7 @@ class MyMainDialog(QDialog):
         :return: None
         """
         try:
-            # todo: 加载正常图片size，不覆盖框
-            scene = QGraphicsScene()
-            img_show = QPixmap()
-            img_show.load(utils.get_file_path(picture_name))
-            img_showItem = QGraphicsPixmapItem()
-            img_showItem.setPixmap(QPixmap(img_show))
-            # img_showItem.setPixmap(QPixmap(img_show).scaled(8000,  8000))    //自己设定尺寸
-            scene.addItem(img_showItem)
-            self.ui.u_graghView_picture.setScene(scene)
-            self.ui.u_graghView_picture.fitInView(QGraphicsPixmapItem(QPixmap(img_show)))
+            self.ui.u_graghView_picture.setPixmap(utils.get_file_path(picture_name))
         except Exception as e:
             print("图片加载失败")
             raise e

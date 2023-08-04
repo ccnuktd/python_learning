@@ -26,7 +26,7 @@
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:16pt;&quot;&gt;艺术鉴赏&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QGraphicsView" name="u_graghView_picture">
+  <widget class="ImageView" name="u_graghView_picture">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -135,6 +135,13 @@ p, li { white-space: pre-wrap; }
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">ImageView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
